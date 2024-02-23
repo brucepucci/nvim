@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
   use('m4xshen/autoclose.nvim')
+  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('Vimjas/vim-python-pep8-indent')
   use({
     "glepnir/lspsaga.nvim",
