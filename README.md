@@ -7,7 +7,7 @@ A modular Neovim configuration built with Lua, featuring LSP support, file navig
 - **Neovim 0.8+** (install with `brew install neovim`)
 - **Git** (for cloning plugins)
 - **A Nerd Font** (optional but recommended for icons)
-- **ripgrep** (for telescope live grep): `brew install ripgrep`
+- **ripgrep** (required for telescope search): `brew install ripgrep`
 - **Node.js** (for some LSP servers): `brew install node`
 
 ## Installation
@@ -63,8 +63,17 @@ mkdir -p ~/.config/nvim
 # Check specific components
 :checkhealth telescope
 :checkhealth nvim-treesitter
-:checkhealth lsp
+:checkhealth vim.lsp
 ```
+
+**Note**: You may see a deprecation warning about `:checkhealth lspconfig` - this is normal and doesn't affect functionality.
+
+#### Quick Prerequisites Check
+```bash
+# Verify all required tools are installed
+nvim --version && rg --version && node --version
+```
+All commands should return version information without errors.
 
 #### Test Key Features
 
