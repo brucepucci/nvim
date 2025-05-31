@@ -49,6 +49,8 @@ return require('packer').startup(function(use)
   }) -- enhanced lsp uis
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
   use("Vigemus/iron.nvim") -- interactive repl for python and other languages
+  use("MeanderingProgrammer/render-markdown.nvim") -- in-buffer markdown rendering
+  use({"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = {"markdown"} end, ft = {"markdown"}}) -- browser markdown preview
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
