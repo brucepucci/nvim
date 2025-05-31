@@ -44,6 +44,7 @@ mkdir -p ~/.config/nvim
    - This downloads and installs all plugins
    - Wait for completion (green checkmarks)
    - Restart Neovim: `:qa` then `nvim`
+   - **Note**: Some plugins have dependencies on others. If you see errors, restart Neovim and run `:PackerSync` again to ensure all plugins install correctly
 
 4. **Install LSP Servers**:
    ```bash
