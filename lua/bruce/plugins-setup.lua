@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
     },
   }) -- enhanced lsp uis
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+  use("Vigemus/iron.nvim") -- interactive repl for python and other languages
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
