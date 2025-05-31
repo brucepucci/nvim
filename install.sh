@@ -93,8 +93,12 @@ install_macos_deps() {
     brew install neovim git ripgrep node python3
     
     # Install a Nerd Font
-    brew tap homebrew/cask-fonts
-    brew install font-hack-nerd-font || log_warning "Font installation failed - install manually from nerdfonts.com"
+    log_info "Installing Nerd Font..."
+    if brew tap homebrew/cask-fonts 2>/dev/null; then
+        brew install font-hack-nerd-font || log_warning "Font installation failed - install manually from nerdfonts.com"
+    else
+        log_warning "Homebrew cask-fonts tap unavailable. Install Nerd Font manually from nerdfonts.com"
+    fi
 }
 
 # Install dependencies for Linux
