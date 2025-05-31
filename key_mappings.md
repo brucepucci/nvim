@@ -21,6 +21,11 @@
 | `Space s e` | Core Neovim | Make split windows equal width & height |
 | `Space s w` | Core Neovim | Close current split window |
 | `Space s m` | vim-maximizer | Toggle split window maximization |
+| `⌃ + j` | Core Neovim | Move to window below and enter terminal mode (for REPL) |
+| `⌃ + k` | Core Neovim | Move to window above |
+| `⌃ + h` | Core Neovim | Move to window left |
+| `⌃ + l` | Core Neovim | Move to window right |
+| `Space r r` | Core Neovim | Toggle between code and REPL (enters terminal mode when going to REPL) |
 
 ## Tab Management
 
@@ -46,8 +51,7 @@
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `Space j` | Core Neovim | Go to next buffer (matches telescope down) |
-| `Space k` | Core Neovim | Go to previous buffer (matches telescope up) |
+| `Space f b` | telescope.nvim | List and switch between open buffers |
 | `Space b d` | Core Neovim | Delete current buffer |
 
 ## Telescope Navigation (Insert Mode)
@@ -87,3 +91,13 @@
 | `g c` (visual mode) | Comment.nvim | Toggle comment for selection |
 | `g b c` (normal mode) | Comment.nvim | Toggle block comment |
 | `g b` (visual mode) | Comment.nvim | Toggle block comment for selection |
+
+## Python REPL (Iron.nvim)
+
+| Key Combination | Package/Source | Description |
+|----------------|----------------|-------------|
+| `⌃ + Return` (normal mode) | iron.nvim | Send current line to IPython REPL |
+| `⌃ + Return` (visual mode) | iron.nvim | Send selected text to IPython REPL |
+| `Space ` ` | iron.nvim | Toggle REPL window visibility (show/hide) |
+| `Space r q` | iron.nvim | Exit REPL |
+| `Space c l` | iron.nvim | Clear REPL |

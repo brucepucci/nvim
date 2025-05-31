@@ -37,8 +37,44 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
--- buffer navigation (matches telescope j/k pattern)
-keymap.set("n", "<leader>j", ":bnext<CR>") -- next buffer (j = down/next)
-keymap.set("n", "<leader>k", ":bprevious<CR>") -- previous buffer (k = up/previous)
+-- buffer navigation
 keymap.set("n", "<leader>bd", ":bdelete<CR>") -- delete buffer
+
+-- window navigation
+keymap.set("n", "<C-j>", "<C-w>j") -- move to window below
+keymap.set("n", "<C-k>", "<C-w>k") -- move to window above
+keymap.set("n", "<C-h>", "<C-w>h") -- move to window left  
+keymap.set("n", "<C-l>", "<C-w>l") -- move to window right
+
+-- REPL navigation (toggle between code and REPL)
+keymap.set("n", "<leader>rr", "<C-w>w<cmd>startinsert<cr>") -- toggle to REPL and enter terminal mode
+keymap.set("t", "<leader>rr", "<C-\\><C-n><C-w>w") -- toggle back to code from REPL
+
+-- REPL window visibility toggle
+keymap.set("n", "<leader>`", function()
+  local windows = vim.api.nvim_list_wins()
+  local terminal_win = nil
+  
+  -- Find terminal window
+  for _, win in ipairs(windows) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    if vim.api.nvim_buf_get_option(buf, "buftype") == "terminal" then
+      terminal_win = win
+      break
+    end
+  end
+  
+  if terminal_win then
+    -- Hide terminal window
+    vim.api.nvim_win_close(terminal_win, false)
+  else
+    -- Show/create REPL
+    vim.cmd("IronRepl")
+  end
+end) -- toggle REPL window visibility
+
+-- terminal mode navigation (for when you're in the REPL)
+keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k") -- exit terminal and move back to code
+keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h") -- exit terminal and move to window left
+keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l") -- exit terminal and move to window right
 
