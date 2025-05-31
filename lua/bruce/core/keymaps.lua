@@ -38,7 +38,7 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- buffer navigation (matches telescope j/k pattern)
-keymap.set("n", "<leader>bj", ":bnext<CR>") -- next buffer (j = down/next)
-keymap.set("n", "<leader>bk", ":bprevious<CR>") -- previous buffer (k = up/previous)
+keymap.set("n", "<leader>j", ":bnext<CR>") -- next buffer (j = down/next)
+keymap.set("n", "<leader>k", ":bprevious<CR>") -- previous buffer (k = up/previous)
 keymap.set("n", "<leader>bd", ":bdelete<CR>") -- delete buffer
 

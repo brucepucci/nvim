@@ -46,8 +46,8 @@
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `Space b j` | Core Neovim | Go to next buffer (matches telescope down) |
-| `Space b k` | Core Neovim | Go to previous buffer (matches telescope up) |
+| `Space j` | Core Neovim | Go to next buffer (matches telescope down) |
+| `Space k` | Core Neovim | Go to previous buffer (matches telescope up) |
 | `Space b d` | Core Neovim | Delete current buffer |
 
 ## Telescope Navigation (Insert Mode)
