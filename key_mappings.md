@@ -35,12 +35,20 @@
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `Space e` | nvim-tree | Toggle file explorer |
+| `Space .` | nvim-tree | Toggle file explorer |
 | `Space f f` | telescope.nvim | Find files in current working directory |
 | `Space f s` | telescope.nvim | Live grep search in files |
 | `Space f c` | telescope.nvim | Find string under cursor in current directory |
 | `Space f b` | telescope.nvim | List open buffers |
 | `Space f h` | telescope.nvim | List available help tags |
+
+## Buffer Management
+
+| Key Combination | Package/Source | Description |
+|----------------|----------------|-------------|
+| `Space j` | Core Neovim | Go to next buffer (matches telescope down) |
+| `Space k` | Core Neovim | Go to previous buffer (matches telescope up) |
+| `Space b d` | Core Neovim | Delete current buffer |
 
 ## Telescope Navigation (Insert Mode)
 
@@ -49,6 +57,7 @@
 | `⌃ + k` | telescope.nvim | Move to previous result in telescope |
 | `⌃ + j` | telescope.nvim | Move to next result in telescope |
 | `⌃ + q` | telescope.nvim | Send selected items to quickfix list |
+| `⌃ + d` | telescope.nvim | Delete buffer (only in buffer picker) |
 
 ## Autocompletion (Insert Mode)
 
