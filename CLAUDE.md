@@ -24,6 +24,7 @@ Key plugins installed:
 - UI enhancements: lualine, catppuccin theme
 - REPL functionality: Iron.nvim for interactive Python development
 - Code editing: autoclose brackets, Python PEP8 indentation, commenting
+- Markdown workflow: render-markdown.nvim for in-buffer rendering, markdown-preview.nvim for browser preview
 
 ## Key Leader Mappings
 
@@ -35,6 +36,7 @@ Leader key is set to space. Important keymaps defined in `lua/bruce/core/keymaps
 - `<leader>tt` - New tab
 - `<leader>`` - Toggle REPL window visibility
 - `<C-CR>` - Send line/selection to REPL (Iron.nvim)
+- `<leader>mp/ms/mt` - Markdown preview start/stop/toggle
 
 ## LSP Configuration
 
@@ -51,6 +53,14 @@ Iron.nvim provides interactive Python development:
 - Configured in `lua/bruce/plugins/iron.lua`
 - Key bindings allow sending code to REPL and toggling window visibility
 
+## Markdown Configuration
+
+Markdown workflow uses two complementary plugins:
+- render-markdown.nvim provides beautiful in-buffer rendering with custom icons and styling
+- markdown-preview.nvim offers browser-based live preview with math and diagram support
+- Configured in `lua/bruce/plugins/render-markdown.lua` and `lua/bruce/plugins/markdown-preview.lua`
+- Auto-activates when opening `.md` files
+
 ## Development Notes
 
 - Uses 4-space indentation consistently
@@ -58,3 +68,4 @@ Iron.nvim provides interactive Python development:
 - Modular structure allows easy addition/removal of plugin configurations
 - Some commented code exists showing alternative configurations
 - Python-specific enhancements with PEP8 indentation and REPL integration
+- Markdown workflow optimized for note-taking with minimal setup

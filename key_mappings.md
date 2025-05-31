@@ -100,3 +100,11 @@
 | `Space `` | iron.nvim | Toggle REPL window visibility (show/hide) |
 | `Space r q` | iron.nvim | Exit REPL |
 | `Space c l` | iron.nvim | Clear REPL |
+
+## Markdown Workflow
+
+| Key Combination | Package/Source | Description |
+|----------------|----------------|-------------|
+| `Space m p` | markdown-preview.nvim | Start markdown preview in browser |
+| `Space m s` | markdown-preview.nvim | Stop markdown preview |
+| `Space m t` | markdown-preview.nvim | Toggle markdown preview |
