@@ -1,80 +1,80 @@
 # Key Mappings
 
-**Leader Key**: `<Space>`
+**Leader Key**: `Space`
 
 ## Core Navigation & Editing
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
 | `jk` (insert mode) | Core Neovim | Exit insert mode to normal mode |
-| `<Space>nh` | Core Neovim | Clear search highlights |
+| `Space + n + h` | Core Neovim | Clear search highlights |
 | `x` | Core Neovim | Delete character without copying to register |
-| `<Space>+` | Core Neovim | Increment number under cursor |
-| `<Space>-` | Core Neovim | Decrement number under cursor |
+| `Space + +` | Core Neovim | Increment number under cursor |
+| `Space + -` | Core Neovim | Decrement number under cursor |
 
 ## Window Management
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `<Space>st` | Core Neovim | Split window vertically |
-| `<Space>sT` | Core Neovim | Split window horizontally |
-| `<Space>se` | Core Neovim | Make split windows equal width & height |
-| `<Space>sw` | Core Neovim | Close current split window |
-| `<Space>sm` | vim-maximizer | Toggle split window maximization |
+| `Space + s + t` | Core Neovim | Split window vertically |
+| `Space + s + T` | Core Neovim | Split window horizontally |
+| `Space + s + e` | Core Neovim | Make split windows equal width & height |
+| `Space + s + w` | Core Neovim | Close current split window |
+| `Space + s + m` | vim-maximizer | Toggle split window maximization |
 
 ## Tab Management
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `<Space>tt` | Core Neovim | Open new tab |
-| `<Space>tw` | Core Neovim | Close current tab |
-| `<Space>tl` | Core Neovim | Go to next tab |
-| `<Space>th` | Core Neovim | Go to previous tab |
+| `Space + t + t` | Core Neovim | Open new tab |
+| `Space + t + w` | Core Neovim | Close current tab |
+| `Space + t + l` | Core Neovim | Go to next tab |
+| `Space + t + h` | Core Neovim | Go to previous tab |
 
 ## File Operations & Navigation
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `<Space>e` | nvim-tree | Toggle file explorer |
-| `<Space>ff` | telescope.nvim | Find files in current working directory |
-| `<Space>fs` | telescope.nvim | Live grep search in files |
-| `<Space>fc` | telescope.nvim | Find string under cursor in current directory |
-| `<Space>fb` | telescope.nvim | List open buffers |
-| `<Space>fh` | telescope.nvim | List available help tags |
+| `Space + e` | nvim-tree | Toggle file explorer |
+| `Space + f + f` | telescope.nvim | Find files in current working directory |
+| `Space + f + s` | telescope.nvim | Live grep search in files |
+| `Space + f + c` | telescope.nvim | Find string under cursor in current directory |
+| `Space + f + b` | telescope.nvim | List open buffers |
+| `Space + f + h` | telescope.nvim | List available help tags |
 
 ## Telescope Navigation (Insert Mode)
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `<C-k>` | telescope.nvim | Move to previous result in telescope |
-| `<C-j>` | telescope.nvim | Move to next result in telescope |
-| `<C-q>` | telescope.nvim | Send selected items to quickfix list |
+| `⌃ + k` | telescope.nvim | Move to previous result in telescope |
+| `⌃ + j` | telescope.nvim | Move to next result in telescope |
+| `⌃ + q` | telescope.nvim | Send selected items to quickfix list |
 
 ## Autocompletion (Insert Mode)
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `<C-k>` | nvim-cmp | Select previous completion suggestion |
-| `<C-j>` | nvim-cmp | Select next completion suggestion |
-| `<C-b>` | nvim-cmp | Scroll completion documentation up |
-| `<C-f>` | nvim-cmp | Scroll completion documentation down |
-| `<C-Space>` | nvim-cmp | Show completion suggestions |
-| `<C-e>` | nvim-cmp | Close completion window |
-| `<CR>` | nvim-cmp | Confirm selected completion |
+| `⌃ + k` | nvim-cmp | Select previous completion suggestion |
+| `⌃ + j` | nvim-cmp | Select next completion suggestion |
+| `⌃ + b` | nvim-cmp | Scroll completion documentation up |
+| `⌃ + f` | nvim-cmp | Scroll completion documentation down |
+| `⌃ + Space` | nvim-cmp | Show completion suggestions |
+| `⌃ + e` | nvim-cmp | Close completion window |
+| `Return` | nvim-cmp | Confirm selected completion |
 
 ## LSP Navigation (Lspsaga)
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `<C-f>` | lspsaga.nvim | Scroll down in LSP preview window |
-| `<C-b>` | lspsaga.nvim | Scroll up in LSP preview window |
-| `<CR>` | lspsaga.nvim | Open file with definition preview |
+| `⌃ + f` | lspsaga.nvim | Scroll down in LSP preview window |
+| `⌃ + b` | lspsaga.nvim | Scroll up in LSP preview window |
+| `Return` | lspsaga.nvim | Open file with definition preview |
 
 ## Comments
 
 | Key Combination | Package/Source | Description |
 |----------------|----------------|-------------|
-| `gcc` (normal mode) | Comment.nvim | Toggle line comment |
-| `gc` (visual mode) | Comment.nvim | Toggle comment for selection |
-| `gbc` (normal mode) | Comment.nvim | Toggle block comment |
-| `gb` (visual mode) | Comment.nvim | Toggle block comment for selection |
+| `g + c + c` (normal mode) | Comment.nvim | Toggle line comment |
+| `g + c` (visual mode) | Comment.nvim | Toggle comment for selection |
+| `g + b + c` (normal mode) | Comment.nvim | Toggle block comment |
+| `g + b` (visual mode) | Comment.nvim | Toggle block comment for selection |
