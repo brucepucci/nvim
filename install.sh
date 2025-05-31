@@ -194,9 +194,18 @@ verify_dependencies() {
 backup_existing_config() {
     if [[ -d "$CONFIG_DIR" ]]; then
         log_warning "Existing Neovim config found at $CONFIG_DIR"
-        log_info "Creating backup at $BACKUP_DIR"
-        mv "$CONFIG_DIR" "$BACKUP_DIR"
-        log_success "Backup created at $BACKUP_DIR"
+        echo
+        read -p "Create backup before replacing? (Y/n): " -n 1 -r
+        echo
+        
+        if [[ $REPLY =~ ^[Nn]$ ]]; then
+            log_info "Skipping backup, removing existing config..."
+            rm -rf "$CONFIG_DIR"
+        else
+            log_info "Creating backup at $BACKUP_DIR"
+            mv "$CONFIG_DIR" "$BACKUP_DIR"
+            log_success "Backup created at $BACKUP_DIR"
+        fi
     fi
 }
 
