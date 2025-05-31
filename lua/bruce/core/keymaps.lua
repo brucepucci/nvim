@@ -73,7 +73,7 @@ end) -- toggle REPL window visibility
 -- markdown keymaps
 keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>") -- start markdown preview
 keymap.set("n", "<leader>ms", ":MarkdownPreviewStop<CR>") -- stop markdown preview
-keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>") -- toggle markdown preview
+keymap.set("n", "<leader>mm", ":MarkdownPreviewToggle<CR>") -- toggle markdown preview
 
 -- terminal mode navigation (for when you're in the REPL)
 keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k") -- exit terminal and move back to code

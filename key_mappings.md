@@ -107,4 +107,4 @@
 |----------------|----------------|-------------|
 | `Space m p` | markdown-preview.nvim | Start markdown preview in browser |
 | `Space m s` | markdown-preview.nvim | Stop markdown preview |
-| `Space m t` | markdown-preview.nvim | Toggle markdown preview |
+| `Space m m` | markdown-preview.nvim | Toggle markdown preview |

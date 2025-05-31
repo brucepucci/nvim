@@ -36,7 +36,7 @@ Leader key is set to space. Important keymaps defined in `lua/bruce/core/keymaps
 - `<leader>tt` - New tab
 - `<leader>`` - Toggle REPL window visibility
 - `<C-CR>` - Send line/selection to REPL (Iron.nvim)
-- `<leader>mp/ms/mt` - Markdown preview start/stop/toggle
+- `<leader>mp/ms/mm` - Markdown preview start/stop/toggle
 
 ## LSP Configuration
 
