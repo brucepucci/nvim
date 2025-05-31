@@ -64,7 +64,9 @@ detect_platform() {
     esac
     
     log_info "Detected platform: $PLATFORM ($ARCH)"
-    [[ "$PLATFORM" == "linux" ]] && log_info "Detected distribution: $DISTRO"
+    if [[ "$PLATFORM" == "linux" ]]; then
+        log_info "Detected distribution: $DISTRO"
+    fi
 }
 
 # Check if command exists
@@ -222,7 +224,7 @@ install_plugins() {
     log_info "Installing LSP servers..."
     
     # Install LSP servers via Mason
-    nvim --headless -c 'MasonInstall pylsp' -c 'quitall'
+    nvim --headless -c 'MasonInstall python-lsp-server' -c 'quitall'
     
     log_success "Plugins and LSP servers installed!"
 }
