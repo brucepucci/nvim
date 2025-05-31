@@ -8,7 +8,7 @@ A modular Neovim configuration built with Lua, featuring LSP support, file navig
 - **Git** (for cloning plugins)
 - **A Nerd Font** (optional but recommended for icons)
 - **ripgrep** (required for telescope search): `brew install ripgrep`
-- **Node.js** (for some LSP servers): `brew install node`
+- **Node.js** (for LSP servers and markdown preview): `brew install node`
 
 ## Installation
 
@@ -77,13 +77,17 @@ All commands should return version information without errors.
 
 #### Test Key Features
 
-1. **File Explorer**: Press `<Space>e` to toggle nvim-tree
+1. **File Explorer**: Press `<Space>.` to toggle nvim-tree
 2. **File Search**: Press `<Space>ff` to open Telescope file finder
 3. **Live Grep**: Press `<Space>fs` to search in files
-4. **LSP**: Open a Python file - you should see:
+4. **Markdown**: Open a `.md` file to see:
+   - Beautiful in-buffer rendering
+   - Press `<Space>mp` for browser preview
+5. **LSP**: Open a Python file - you should see:
    - Syntax highlighting
    - Error diagnostics
    - Autocompletion with `<Tab>`
+6. **Python REPL**: Press `<Space>`` to toggle iPython REPL
 
 #### Common Issues and Solutions
 
