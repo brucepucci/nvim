@@ -12,46 +12,72 @@ A modular Neovim configuration built with Lua, featuring LSP support, file navig
 
 ## Installation
 
-### 1. Clone or Copy Configuration
+### Quick Install (Recommended)
 
-If you're setting this up fresh, copy all files to your Neovim config directory:
+**One-line install script that handles everything:**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/brucepucci/nvim/main/install.sh | bash
+```
+
+This script will:
+- ✅ Detect your platform (macOS/Linux/ARM)
+- ✅ Install all dependencies automatically
+- ✅ Backup any existing config
+- ✅ Clone and setup this configuration
+- ✅ Install all plugins and LSP servers
+- ✅ Verify everything works
+
+**Supported platforms:**
+- macOS (Intel & Apple Silicon)
+- Ubuntu/Debian
+- Arch Linux
+- Fedora/RHEL/CentOS
+- Alpine Linux
+- Raspberry Pi (ARM)
+
+### Manual Installation
+
+If you prefer manual setup:
+
+#### 1. Install Dependencies
+
+**macOS:**
+```bash
+brew install neovim git ripgrep node python3
+brew install font-hack-nerd-font
+```
+
+**Ubuntu/Debian:**
+```bash
+sudo apt update
+sudo apt install neovim git ripgrep nodejs npm python3 python3-pip
+```
+
+**Arch Linux:**
+```bash
+sudo pacman -S neovim git ripgrep nodejs npm python python-pip
+```
+
+#### 2. Clone Configuration
 
 ```bash
 # Backup existing config (if any)
 mv ~/.config/nvim ~/.config/nvim.backup
 
-# Create config directory
-mkdir -p ~/.config/nvim
-
-# Copy this configuration to ~/.config/nvim
+# Clone this configuration
+git clone https://github.com/brucepucci/nvim.git ~/.config/nvim
 ```
 
-### 2. First Launch Setup
+#### 3. Install Plugins & LSP
 
-1. **Start Neovim**:
-   ```bash
-   nvim
-   ```
+```bash
+# Install plugins
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
-2. **Install Packer** (automatic):
-   - The configuration automatically installs Packer on first run
-   - You'll see Packer cloning itself to the data directory
-
-3. **Install Plugins**:
-   ```bash
-   :PackerSync
-   ```
-   - This downloads and installs all plugins
-   - Wait for completion (green checkmarks)
-   - Restart Neovim: `:qa` then `nvim`
-   - **Note**: Some plugins have dependencies on others. If you see errors, restart Neovim and run `:PackerSync` again to ensure all plugins install correctly
-
-4. **Install LSP Servers**:
-   ```bash
-   :Mason
-   ```
-   - Mason will auto-install pylsp (Python LSP server)
-   - You can install additional servers here if needed
+# Install LSP servers
+nvim --headless -c 'MasonInstall pylsp' -c 'quitall'
+```
 
 ### 3. Verify Installation
 
