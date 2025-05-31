@@ -25,7 +25,6 @@
 | `⌃ + k` | Core Neovim | Move to window above |
 | `⌃ + h` | Core Neovim | Move to window left |
 | `⌃ + l` | Core Neovim | Move to window right |
-| `Space r r` | Core Neovim | Toggle between code and REPL (enters terminal mode when going to REPL) |
 
 ## Tab Management
 
@@ -98,6 +97,6 @@
 |----------------|----------------|-------------|
 | `⌃ + Return` (normal mode) | iron.nvim | Send current line to IPython REPL |
 | `⌃ + Return` (visual mode) | iron.nvim | Send selected text to IPython REPL |
-| `Space ` ` | iron.nvim | Toggle REPL window visibility (show/hide) |
+| `Space `` | iron.nvim | Toggle REPL window visibility (show/hide) |
 | `Space r q` | iron.nvim | Exit REPL |
 | `Space c l` | iron.nvim | Clear REPL |

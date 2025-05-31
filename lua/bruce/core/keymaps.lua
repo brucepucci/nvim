@@ -46,9 +46,6 @@ keymap.set("n", "<C-k>", "<C-w>k") -- move to window above
 keymap.set("n", "<C-h>", "<C-w>h") -- move to window left  
 keymap.set("n", "<C-l>", "<C-w>l") -- move to window right
 
--- REPL navigation (toggle between code and REPL)
-keymap.set("n", "<leader>rr", "<C-w>w<cmd>startinsert<cr>") -- toggle to REPL and enter terminal mode
-keymap.set("t", "<leader>rr", "<C-\\><C-n><C-w>w") -- toggle back to code from REPL
 
 -- REPL window visibility toggle
 keymap.set("n", "<leader>`", function()
