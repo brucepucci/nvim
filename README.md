@@ -107,30 +107,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 
 ## Key Mappings
 
-**Leader Key**: `<Space>`
-
-### File Operations
-- `<Space>e` - Toggle file explorer
-- `<Space>ff` - Find files
-- `<Space>fs` - Live grep search
-- `<Space>fc` - Find word under cursor
-- `<Space>fb` - List open buffers
-
-### Window Management
-- `<Space>st` - Split vertically
-- `<Space>sT` - Split horizontally
-- `<Space>se` - Equalize splits
-- `<Space>sw` - Close split
-
-### Tabs
-- `<Space>tt` - New tab
-- `<Space>tw` - Close tab
-- `<Space>tl` - Next tab
-- `<Space>th` - Previous tab
-
-### Other
-- `jk` (in insert mode) - Exit to normal mode
-- `<Space>nh` - Clear search highlights
+See [key_mappings.md](key_mappings.md) for a comprehensive list of all key mappings organized by function.
 
 ## Plugin Management
 
