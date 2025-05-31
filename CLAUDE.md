@@ -22,15 +22,19 @@ Key plugins installed:
 - Completion: nvim-cmp with various sources
 - Syntax highlighting: treesitter
 - UI enhancements: lualine, catppuccin theme
+- REPL functionality: Iron.nvim for interactive Python development
+- Code editing: autoclose brackets, Python PEP8 indentation, commenting
 
 ## Key Leader Mappings
 
 Leader key is set to space. Important keymaps defined in `lua/bruce/core/keymaps.lua`:
-- `<leader>e` - Toggle file explorer (nvim-tree)
+- `<leader>.` - Toggle file explorer (nvim-tree)
 - `<leader>ff` - Find files (telescope)
 - `<leader>fs` - Live grep search (telescope)
 - `<leader>st/sT` - Split windows vertically/horizontally
 - `<leader>tt` - New tab
+- `<leader>`` - Toggle REPL window visibility
+- `<C-CR>` - Send line/selection to REPL (Iron.nvim)
 
 ## LSP Configuration
 
@@ -39,9 +43,18 @@ LSP setup is split across files in `lua/bruce/plugins/lsp/`:
 - Lspconfig handles server configuration
 - Lspsaga provides enhanced LSP UI
 
+## REPL Configuration
+
+Iron.nvim provides interactive Python development:
+- Uses iPython with `--no-autoindent` flag
+- REPL opens in horizontal split at bottom (30 lines)
+- Configured in `lua/bruce/plugins/iron.lua`
+- Key bindings allow sending code to REPL and toggling window visibility
+
 ## Development Notes
 
 - Uses 4-space indentation consistently
 - Safe plugin loading with pcall() pattern throughout
 - Modular structure allows easy addition/removal of plugin configurations
 - Some commented code exists showing alternative configurations
+- Python-specific enhancements with PEP8 indentation and REPL integration
