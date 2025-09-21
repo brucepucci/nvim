@@ -80,3 +80,6 @@ keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k") -- exit terminal and move back to 
 keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h") -- exit terminal and move to window left
 keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l") -- exit terminal and move to window right
 
+-- global
+vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
+
